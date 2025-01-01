@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    "
+  >
+    <table
+      class="container"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="
+        max-width: 600px;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 20px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <!-- Row 1 -->
+      <tr>
+        <td style="padding: 10px 0; text-align: left">
+          <img
+            src="https://api.sporkoo.com/public/assets/logo.png"
+            alt="Sporkoo"
+            style="width: 150px"
+          />
+        </td>
+      </tr>
+      <!-- Row 2 -->
+      <tr>
+        <td style="padding: 10px 0; text-align: left">
+          <p
+            style="
+              font-size: 16px;
+              color: #333333;
+              font-family: Inter, sans-serif;
+            "
+          >
+            Bonjour {{name}},
+          </p>
+          <p
+            style="font-size: 16px; color: #333333"
+            ;
+            font-family:
+            Inter,
+            sans-serif;
+          >
+            Voici votre code de vérification :
+          </p>
+        </td>
+      </tr>
+      <!-- Row 3 -->
+      <tr>
+        <td style="padding: 10px 0; text-align: left">
+          <table border="0" cellpadding="0" cellspacing="0" width="300px">
+            <tr>
+              {{#each verificationCode}}
+              <td>
+                <p
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 10px;
+                    background-color: #ffffff;
+                    box-shadow: 0px 1px 5px rgba(16, 24, 40, 0.05);
+                    border-style: solid;
+                    border-width: 2px;
+                    border-color: rgba(255, 68, 5, 1);
+                    font-weight: 500;
+                    font-style: normal;
+                    letter-spacing: -2;
+                    text-align: center;
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-family: Inter, sans-serif;
+                    font-size: 48px;
+                    color: #ff4405;
+                  "
+                >
+                  {{this}}
+                </p>
+              </td>
+              {{/each}}
+              <!-- First p element -->
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Row 4 -->
+      <tr>
+        <td style="padding: 10px 0; text-align: left">
+          <p style="font-family: Inter, sans-serif">
+            Ce courriel a été envoyé à {{email}}.
+          </p>
+        </td>
+      </tr>
+      <!-- Row 5 with two columns -->
+      <tr>
+        <td style="padding: 10px 0">
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="padding: 10px; text-align: left; width: 50%">
+                <!-- <img
+                  src="https://api.sporkoo.com/public/assets/logo.png"
+                  alt="sporkoo"
+                  style="width: 150px"
+                /> -->
+              </td>
+              <td style="padding: 10px; text-align: right; width: 50%">
+                <a href="https://www.facebook.com/sporkoo">
+                  <img
+                    src="https://api.sporkoo.com/public/assets/facebook.png"
+                    alt="Instagram"
+                    style="width: 24px"
+                  />
+                </a>
+                <a href="https://www.instagram.com/spork.oo/">
+                  <img
+                    src="https://api.sporkoo.com/public/assets/instagram.png"
+                    alt="Facebook"
+                    style="width: 24px"
+                /></a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
